@@ -1,0 +1,33 @@
+#board {
+    padding-top: 3em;
+    text-align: center;
+}
+
+.row {
+    clear: both;
+    margin: 0 auto;
+    width: 302px;
+}
+
+.row > div {
+    cursor: pointer;
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
+.top {
+    border-bottom: 1px solid black;
+}
+
+.bottom {
+    border-top: 1px solid rgb(54, 46, 46);
+}
+
+.left {
+    border-right: 1px solid rgb(145, 88, 88);
+}
+
+.right {
+    border-left: 1px solid rgb(201, 78, 78);
+}
