@@ -1,5 +1,5 @@
 // Game Variables
-let gameIsLive = true;
+let gameOn = true;
 let player1 = "x",
     player2 = "o";
 
@@ -46,6 +46,8 @@ function gameIsWon(combo) {
         [cells[0].innerHTML, cells[4].innerHTML, cells[8].innerHTML],
         [cells[2].innerHTML, cells[4].innerHTML, cells[6].innerHTML]
     ];
+    console.log(checkBoard);
+
     /*let checkBoard = [
         [cells[0].innerHTML, cells[1].innerHTML, cells[2].innerHTML],
         [cells[3], cells[4], cells[5]],
@@ -57,7 +59,6 @@ function gameIsWon(combo) {
         [cells[2], cells[4], cells[6]]
     ];*/
 
-    console.log(checkBoard);
 
     /*for (let i = 0; i < checkBoard.length; i++) {
         console.log(checkBoard);
@@ -66,13 +67,13 @@ function gameIsWon(combo) {
             gameIsLive = false;
         } else if (checkBoard[i][0], checkBoard[i][1], checkBoard[i][2] && clickNum % 2 == false) {
             document.getElementById('.winner').innerHTML = 'O HAS WON!';
-            gameIsLive = false;
+            gameOn = false;
         } else if (clickNum >= 9) {
-            gameIsLive = false;
+            gameOn = false;
         }
     };*/
 
-    // use a loop and then a nested inside, inside the first loop set variable to  check if cell is filled.
+    // use a loop and then a nested loop, inside the first loop set variable to  check if cell is filled.
 
     for (let i = 0; i < checkBoard.length; i++) {
         [k, l, m] = [checkBoard[i][0], checkBoard[i][1], checkBoard[i][2]];
@@ -90,11 +91,11 @@ function gameIsWon(combo) {
         if (k === combo && l === combo && m === combo && clickNum % 2 == true) {
             let msg = 'X HAS WON!';
             document.querySelector('.winner').innerHTML = msg;
-            gameIsLive = false;
+            gameOn = false;
         } else if (k === combo && l === combo && m === combo && clickNum % 2 == false) {
-            let msg = 'Y HAS WON!';
+            let msg = 'O HAS WON!';
             document.querySelector('.winner').innerHTML = msg;
-            gameIsLive = false;
+            gameOn = false;
         }
     }
 
@@ -103,3 +104,7 @@ function gameIsWon(combo) {
 function selector(e) {
     return document.querySelector('.row > div').innerHTML;
 };
+
+function strike() {
+    
+}
