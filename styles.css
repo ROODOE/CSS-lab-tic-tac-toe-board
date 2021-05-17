@@ -1,3 +1,15 @@
+* {
+    background-color: lightgrey;
+}
+
+.winner {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: blue;
+}
+
+
 #board {
     padding-top: 3em;
     text-align: center;
@@ -6,28 +18,33 @@
 .row {
     clear: both;
     margin: 0 auto;
-    width: 302px;
+    width: 352px;
 }
 
+/* this selector represents all 9 cells*/
 .row > div {
     cursor: pointer;
     float: left;
     height: 100px;
     width: 100px;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    padding-top: 35px;
 }
 
-.top {
-    border-bottom: 1px solid black;
+.top-left, .top-mid, .top-right {
+    border-bottom: 5px solid black;
 }
 
-.bottom {
-    border-top: 1px solid rgb(54, 46, 46);
+.bottom-left, .bottom-mid, .bottom-right {
+    border-top: 5px solid rgb(54, 46, 46);
 }
 
-.left {
-    border-right: 1px solid rgb(145, 88, 88);
+.top-left, .center-left, .bottom-left {
+    border-right: 5px solid rgb(145, 88, 88);
 }
 
-.right {
-    border-left: 1px solid rgb(201, 78, 78);
+.top-right, .center-right, .bottom-right {
+    border-left: 5px solid rgb(201, 78, 78);
 }
